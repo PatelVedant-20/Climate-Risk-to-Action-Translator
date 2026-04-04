@@ -1,0 +1,150 @@
+.forecast-strip {
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem;
+    animation: fadeInUp 0.5s ease 0.2s backwards;
+}
+
+.forecast-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.forecast-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--text-primary), var(--accent-emerald));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.forecast-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── Scrollable Forecast Cards ─────────────────────────── */
+.forecast-scroll {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 222, 128, 0.15) transparent;
+}
+
+.forecast-scroll::-webkit-scrollbar {
+    height: 4px;
+}
+
+.forecast-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.forecast-scroll::-webkit-scrollbar-thumb {
+    background: rgba(74, 222, 128, 0.15);
+    border-radius: 2px;
+}
+
+.forecast-card {
+    flex: 0 0 auto;
+    min-width: 130px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    scroll-snap-align: start;
+    cursor: default;
+    animation: fadeInUp 0.4s ease backwards;
+}
+
+.forecast-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.forecast-card:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.forecast-card:nth-child(3) {
+    animation-delay: 0.19s;
+}
+
+.forecast-card:nth-child(4) {
+    animation-delay: 0.26s;
+}
+
+.forecast-card:nth-child(5) {
+    animation-delay: 0.33s;
+}
+
+.forecast-day {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.forecast-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    margin: 0.15rem 0;
+}
+
+.forecast-temps {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+}
+
+.forecast-high {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.forecast-low {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.forecast-condition {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+    text-transform: capitalize;
+}
+
+.forecast-wind {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .forecast-strip {
+        padding: 0 0.75rem;
+    }
+
+    .forecast-card {
+        min-width: 110px;
+        padding: 0.75rem;
+    }
+}

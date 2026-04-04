@@ -1,0 +1,133 @@
+.advice-card {
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.5s ease backwards;
+    transition: all var(--transition-base);
+}
+
+.advice-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Severity border accent */
+.advice-card.severity-low {
+    border-left: 3px solid var(--severity-low);
+}
+
+.advice-card.severity-moderate {
+    border-left: 3px solid var(--severity-moderate);
+}
+
+.advice-card.severity-high {
+    border-left: 3px solid var(--severity-high);
+}
+
+.advice-card.severity-extreme {
+    border-left: 3px solid var(--severity-extreme);
+}
+
+.advice-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.advice-icon {
+    font-size: 2rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.advice-badges {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.advice-category {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 999px;
+}
+
+.advice-severity {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 999px;
+}
+
+.advice-severity.severity-low {
+    color: var(--severity-low);
+    background: var(--severity-low-bg);
+}
+
+.advice-severity.severity-moderate {
+    color: var(--severity-moderate);
+    background: var(--severity-moderate-bg);
+}
+
+.advice-severity.severity-high {
+    color: var(--severity-high);
+    background: var(--severity-high-bg);
+}
+
+.advice-severity.severity-extreme {
+    color: var(--severity-extreme);
+    background: var(--severity-extreme-bg);
+}
+
+.advice-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.advice-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Bottom glow indicator */
+.advice-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.advice-card:hover .advice-indicator {
+    opacity: 1;
+}
+
+.advice-indicator.severity-low {
+    background: linear-gradient(90deg, transparent, var(--severity-low), transparent);
+}
+
+.advice-indicator.severity-moderate {
+    background: linear-gradient(90deg, transparent, var(--severity-moderate), transparent);
+}
+
+.advice-indicator.severity-high {
+    background: linear-gradient(90deg, transparent, var(--severity-high), transparent);
+}
+
+.advice-indicator.severity-extreme {
+    background: linear-gradient(90deg, transparent, var(--severity-extreme), transparent);
+}

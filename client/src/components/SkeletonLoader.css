@@ -1,0 +1,146 @@
+.skeleton-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ── Skeleton Metric Cards ─────────────────────────────── */
+.skeleton-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.skeleton-metric-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-metric-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.skeleton-metric-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skeleton-metric-card:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.skeleton-metric-card:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+.skeleton-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.skeleton-line {
+    height: 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.skeleton-line.lg {
+    width: 60%;
+    height: 24px;
+    border-radius: 8px;
+}
+
+.skeleton-line.md {
+    width: 80%;
+}
+
+.skeleton-line.sm {
+    width: 50%;
+    height: 10px;
+}
+
+/* ── Skeleton Advice Cards ────────────────────────────── */
+.skeleton-advice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.skeleton-advice-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-advice-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skeleton-advice-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.skeleton-advice-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.skeleton-badge {
+    width: 55px;
+    height: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.skeleton-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.skeleton-line.full {
+    width: 100%;
+}
+
+.skeleton-line.three-quarter {
+    width: 75%;
+}
+
+/* ── Pulse Animation ───────────────────────────────────── */
+@keyframes skeletonPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .skeleton-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skeleton-advice-grid {
+        grid-template-columns: 1fr;
+    }
+}
